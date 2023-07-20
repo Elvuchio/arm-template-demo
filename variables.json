@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "variables": {
+      "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'sa')]"
+    },
+    "parameters": {
+      "location": {
+        "type": "string",
+        "metadata": {
+          "description": "Location for all resources."
+        },
+        "defaultValue": "East US"
+      },
+      "vmName": {
+        "type": "string",
+        "metadata": {
+          "description": "Name of the Virtual Machine."
+        }
+      },
+      "vmSize": {
+        "type": "string",
+        "metadata": {
+          "description": "Size of the Virtual Machine."
+        },
+        "defaultValue": "Standard_DS1_v2"
+      },
+      "storageAccountType": {
+        "type": "string",
+        "metadata": {
+          "description": "Type of the Storage Account."
+        },
+        "defaultValue": "Standard_LRS"
+      }
+    },
+  
